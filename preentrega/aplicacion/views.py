@@ -9,3 +9,9 @@ def leer_autor(request):
 
 def index(request):
     return render(request, "index.html")
+
+def libro(request):
+    return HttpResponse("vista libro")
+
+def devuelto(request):
+    return render( request, "devuelto.html")
