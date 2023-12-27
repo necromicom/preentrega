@@ -55,7 +55,7 @@ ROOT_URLCONF = 'preentrega.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:\\Users\\ezybr\\Desktop\\preentrega\\preentrega\\aplicacion\\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
