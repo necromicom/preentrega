@@ -6,3 +6,6 @@ from aplicacion.models import Autor
 
 def leer_autor(request):
     return render(request, "autor.html")
+
+def index(request):
+    return render(request, "index.html")
