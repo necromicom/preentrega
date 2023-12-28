@@ -3,7 +3,7 @@
 {% block herencia %}
 <form action="{% url 'libro' %}" method="post">{% csrf_token %}
   <p>Nombre:<input type="text" name="nombre"></p>
-  <p>Paginas:<input type="number" name="paginas"></p>
+  <p>Apellido:<input type="text" name="apellido"></p>
   <input type="submit" value= "enviar">
 </form>  
 {% endblock %}

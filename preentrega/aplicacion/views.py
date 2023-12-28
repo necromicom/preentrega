@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from aplicacion.models import Autor, Libro
-from aplicacion.forms import FormularioLibros
+from aplicacion.forms import FormularioLibros, FormAutor, Formdevuelto
 
 
 def leer_autor(request):
@@ -27,3 +27,7 @@ def libro(request):
 
 def devuelto(request):
     return render( request, "devuelto.html")
+
+def autor(request):
+    if request.method == "POST":
+        autorform = 
