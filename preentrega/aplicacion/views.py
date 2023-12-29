@@ -30,4 +30,29 @@ def devuelto(request):
 
 def autor(request):
     if request.method == "POST":
-        autorform = 
+        autorform = FormAutor(request.POST)
+        if autorform.is_valid():
+            datos = autorform.cleaned_data
+            nombre = datos.get("nombre")
+            apellido = datos.get("aprllido")
+            autor1 = Autor(nombre=nombre, apellido=apellido)
+            autor1.save
+            return render(request, "index.html")
+    return render(request, "autor.html")
+
+
+def buscar (request):
+    if request.method == "GET":
+        buscar = request.GET.get("nombre")
+        if buscar is None:
+            return HttpResponse("No esta")
+        
+        name = Libro.objects.filter(buscar__icontains=buscar)
+
+        texto = {
+            "paginas": name,
+            "nombre": buscar
+        }
+        return render(request, "buscar2.html", texto)
+    
+    
