@@ -2,8 +2,9 @@
 {% load static %}
 {% block herencia %}
 <form action="{% url 'libro' %}" method="post">{% csrf_token %}
-    <p>Nombre:<input type="text" name="nombre"></p>
-    <p>Paginas:<input type="number" name="paginas"></p>
-    <input type="submit" value= "enviar">
+    <table>
+        {{libroform.as_table}}
+    </table>
+    <input type='submit' text='Enviar'>
 </form>  
 {%endblock%}

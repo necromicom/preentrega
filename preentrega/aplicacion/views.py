@@ -38,7 +38,10 @@ def autor(request):
             autor1 = Autor(nombre=nombre, apellido=apellido)
             autor1.save
             return render(request, "index.html")
-    return render(request, "autor.html")
+    else:
+        autorform = FormAutor()        
+
+    return render(request, "autor.html", {'form': autorform})
 
 
 def buscar (request):
@@ -55,4 +58,4 @@ def buscar (request):
         }
         return render(request, "buscar2.html", texto)
     
-    
+    return render(request, "buscar.html")
