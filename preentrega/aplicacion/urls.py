@@ -1,8 +1,8 @@
 
 from django.urls import path
-from aplicacion.views import leer_autor, index, libro, devuelto, buscar
+from aplicacion.views import autor, index, libro, devuelto, buscar
 urlpatterns = [
-    path("autor/", leer_autor, name="autor"),
+    path("autor/", autor, name="autor"),
     path("", index, name="inicio"),
     path("libro/", libro, name="libro"),
     path("devuelto/", devuelto, name="devuelto"),

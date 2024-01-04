@@ -15,10 +15,10 @@ def libro(request):
         libroform = FormularioLibros(request.POST)
         if  libroform.is_valid():
          datos = libroform.cleaned_data
-         nomre = datos.get("nombre")
+         nombre = datos.get("nombre")
          paginas = datos.get("paginas")
-         libro1 = Libro(nombre=nomre, paginas=paginas)
-         libro1.save
+         libro1 = Libro(nombre=nombre, paginas=paginas)
+         libro1.save()
         return render(request, "index.html")
     else:
         libroform = FormularioLibros()
@@ -34,9 +34,9 @@ def autor(request):
         if autorform.is_valid():
             datos = autorform.cleaned_data
             nombre = datos.get("nombre")
-            apellido = datos.get("aprllido")
+            apellido = datos.get("apellido")
             autor1 = Autor(nombre=nombre, apellido=apellido)
-            autor1.save
+            autor1.save()
             return render(request, "index.html")
     else:
         autorform = FormAutor()        
